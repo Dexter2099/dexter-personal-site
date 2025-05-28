@@ -114,8 +114,8 @@ export function Technologies() {
                       {filteredSkillsData[category].map((skill) => (
                         <HybridTooltip key={skill.id}>
                           <HybridTooltipTrigger asChild>
-                            <Button
-                              className={`h-14 p-2 sm:p-2 ${skill.level === 'learning' ? 'border border-green-300' : ''}`}
+                          <Button
+                              className="h-14 p-2 sm:p-2"
                               variant="outline"
                             >
                               <IconsBundle kind={skill.id} size={10} iconType="icon" />
@@ -133,10 +133,6 @@ export function Technologies() {
                       {/* <div className="text-xs text-muted-foreground">
                     Updated <time dateTime="2023-11-23">November 23, 2023</time>
                   </div> */}
-                      <div className="flex items-center text-xs text-muted-foreground">
-                        <span className="mx-1 inline-block h-3 w-3 rounded-full bg-green-300"></span>
-                        <span>Currently Learning</span>
-                      </div>
                       <Pagination className="ml-auto mr-0 w-auto">
                         <PaginationContent>
                           <PaginationItem>
