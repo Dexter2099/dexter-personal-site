@@ -38,7 +38,7 @@ export default function Hero() {
       <ModelViewer />
       <div>
         <ul id="bios" className="hidden">
-          <li>Hi it's Andrew!</li>
+          <li>Hi I'm Dexter!</li>
         </ul>
         <span
           ref={el}
@@ -46,8 +46,8 @@ export default function Hero() {
         />
       </div>
       <p className="mx-auto mt-3 max-w-lg text-gray-500 dark:text-gray-400 md:text-xl lg:text-lg xl:text-xl">
-        Welcome to my over-engineered personal blog where I write about software engineering,
-        productivity, and other stupid stuff.
+        Welcome to my personal blog where I write about my software engineering
+        journey.
       </p>
       <p className="mx-auto max-w-lg text-gray-500 dark:text-gray-400 md:text-xl lg:text-lg xl:text-xl">
         Also, it's my portfolio.

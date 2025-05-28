@@ -2,21 +2,21 @@
 
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Andrew Sameh',
-  author: 'Andrew Sameh',
-  headerTitle: 'Andrew Sameh',
-  description: `An over-engineered personal blog where I write about software engineering, productivity, and other stupid stuff. Also, it's my portfolio.`,
+  title: 'Dexter Mehta',
+  author: 'Dexter Mehta',
+  headerTitle: 'Dexter Mehta',
+  description: `A personal blog where I write about software engineering and my developer journey. Also, it's my portfolio.`,
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.andrewsam.xyz',
   analyticsURL:
   "https://cloud.umami.is/share/Uyouy7mKI5Oy68QX/andrewsam.xyz",
-  siteRepo: 'https://github.com/andrew-sameh/andrewsam.xyz',
+  siteRepo: 'https://github.com/Dexter2099/dexter-personal-site',
   siteLogo: '/static/images/site/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'g.andrewsameh@gmail.com',
-  github: 'https://github.com/andrew-sameh',
+  email: 'Dexter.mehta01@gmail.com',
+  github: 'https://github.com/Dexter2099',
   x: 'https://twitter.com/AndrewSamh',
   twitter: 'https://twitter.com/AndrewSamh',
   // facebook: 'https://facebook.com',
