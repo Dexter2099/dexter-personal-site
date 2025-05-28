@@ -73,7 +73,7 @@ export function Technologies() {
   return (
     <div className="my-10 w-full">
       <h3 className="text-2xl font-extrabold leading-9 tracking-tight sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
-        Technologies I've worked with
+        Technologies I'm learning
       </h3>
       <div className="mt-5">
         <TouchProvider>
