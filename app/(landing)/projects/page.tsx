@@ -19,7 +19,7 @@ export default async function Projects() {
               Projects
             </h1>
             <p className="text-base text-gray-500 dark:text-gray-400 md:text-lg md:leading-7">
-              Some of my the stuff I have worked on.
+              Some of the stuff I have worked on.
             </p>
           </div>
           <Separator />
