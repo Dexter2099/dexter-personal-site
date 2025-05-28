@@ -2,7 +2,7 @@ import NextAuth from "next-auth"
 import authConfig from "@/auth.config"
  
 
-const publicPages = ["/", "/terms", "/privacy", "/resume", "/blog/*", "/post/*", "/tags/*", "/search", "/whaaaat", "/projects", "/about"];
+const publicPages = ["/", "/terms", "/privacy", "/blog/*", "/post/*", "/tags/*", "/search", "/whaaaat", "/projects", "/about"];
 const authPages = ["/auth/*", "/register"];
 const protectedPages = ["/x/*", "/settings*","/admin/*", '/ai/*',"/apps/*"];
 

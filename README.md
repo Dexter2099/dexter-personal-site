@@ -93,7 +93,6 @@ Edit the layout in `app` or content in `data`. With live reloading, the pages au
 
 `data/authors/default.md` - default author information (required). Additional authors can be added as files in `data/authors`.
 
-`data/resume/default.mdx` - default MDX Resume.
 
 `data/mainData.ts` - data used to generate styled card on the projects page, the technologies, and the experience components in the root page.
 
@@ -178,7 +177,6 @@ canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-t
 
 - [Base Template - timlrx/tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
 - [GLB Model - tamminen](https://sketchfab.com/tamminen)
-- [Resume Section - leohuynh](https://www.leohuynh.dev/resume/)
 
 
 ## Licence
