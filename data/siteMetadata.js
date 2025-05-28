@@ -8,7 +8,7 @@ const siteMetadata = {
   description: `A personal blog where I write about software engineering and my developer journey. Also, it's my portfolio.`,
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: '',
+  siteUrl: 'http://localhost:3000',
   analyticsURL:
   "https://cloud.umami.is/share/Uyouy7mKI5Oy68QX/andrewsam.xyz",
   siteRepo: 'https://github.com/Dexter2099/dexter-personal-site',
