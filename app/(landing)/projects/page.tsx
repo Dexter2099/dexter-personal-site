@@ -10,7 +10,6 @@ export default async function Projects() {
   const delay = (ms: number) => new Promise((res) => setTimeout(res, ms))
   // await delay(10000)
   const workProjects = projectsData.filter(({ type }) => type === 'work')
-  const sideProjects = projectsData.filter(({ type }) => type === 'self')
   return (
     <>
       <SectionContainer>
@@ -32,15 +31,7 @@ export default async function Projects() {
               ))}
             </div>
           </div>
-          <Separator />
-          <div className=" py-12">
-            <h3 className="mb-4 text-3xl font-extrabold leading-9 tracking-tight">Side Projects</h3>
-            <div className="-m-4 grid grid-cols-1 gap-2 md:grid-cols-2">
-              {sideProjects.map((project) => (
-                <ProjectCard key={project.title} project={project} />
-              ))}
-            </div>
-          </div>
+          {/* Removed Side Projects section */}
         </div>
       </SectionContainer>
     </>
