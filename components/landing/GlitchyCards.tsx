@@ -19,12 +19,6 @@ export function MeteorsDemo() {
       url: '/about',
       icon: '/projects',
     },
-    {
-      title: 'Resume',
-      buttonText: 'Resume',
-      url: '/resume',
-      icon: '/projects',
-    },
   ]
   return (
     <div className="my-10 grid grid-cols-3 items-center justify-center gap-1">

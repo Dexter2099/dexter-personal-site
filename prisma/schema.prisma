@@ -175,7 +175,6 @@ model Comment {
 enum PageType {
   blogs
   projects
-  resume
   tags
   about
   home
