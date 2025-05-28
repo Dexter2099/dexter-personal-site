@@ -8,7 +8,7 @@ const siteMetadata = {
   description: `A personal blog where I write about software engineering and my developer journey. Also, it's my portfolio.`,
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://www.andrewsam.xyz',
+  siteUrl: '',
   analyticsURL:
   "https://cloud.umami.is/share/Uyouy7mKI5Oy68QX/andrewsam.xyz",
   siteRepo: 'https://github.com/Dexter2099/dexter-personal-site',
@@ -17,15 +17,15 @@ const siteMetadata = {
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'Dexter.mehta01@gmail.com',
   github: 'https://github.com/Dexter2099',
-  x: 'https://twitter.com/AndrewSamh',
-  twitter: 'https://twitter.com/AndrewSamh',
+  
+  
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/in/andrewsameh/',
+  linkedin: 'https://www.linkedin.com/in/dexter-m-b808b4151/',
   // threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com/andrewzameh/',
-  spotify: 'https://open.spotify.com/user/nm8cvqw3q56ft39knd63d1dgw',
-  buymeacoffee: 'https://buymeacoffee.com/andrewsameh',
+  
+  spotify: 'https://open.spotify.com/user/dex048?si=982b9a3640564b22',
+  
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
