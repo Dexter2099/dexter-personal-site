@@ -61,7 +61,8 @@ npx degit 'andrew-sameh/andrewsam.xyz'
 5. Modify `projectsData.ts`
 6. Modify `headerNavLinks.ts` to customize navigation links
 7. Add blog posts
-8. Deploy on Vercel
+8. Set `RESEND_TOKEN` and `RESEND_EMAIL_DOMAIN` in your environment to enable email features
+9. Deploy on Vercel
 
 ## Installation
 
