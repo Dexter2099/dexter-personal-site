@@ -5,56 +5,62 @@ const siteMetadata = {
   title: 'Dexter Mehta',
   author: 'Dexter Mehta',
   headerTitle: 'Dexter Mehta',
-  description: `A personal blog where I write about software engineering and my developer journey. Also, it's my portfolio.`,
+  description:
+    `A personal blog where I write about software engineering and my developer journey. Also, it's my portfolio.`,
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'http://localhost:3000',
-  
+
   siteRepo: 'https://github.com/Dexter2099/dexter-personal-site',
   siteLogo: '/static/images/site/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'Dexter.mehta01@gmail.com',
   github: 'https://github.com/Dexter2099',
-  
-  
+
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/in/dexter-m-b808b4151/',
   // threads: 'https://www.threads.net',
-  
+
   spotify: 'https://open.spotify.com/user/dex048?si=982b9a3640564b22',
-  
+
   locale: 'en-US',
-  
-    // If you want to use an analytics provider you have to add it to the
-    // content security policy in the `next.config.js` file.
-    // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
-    
-      // We use an env variable for this site to avoid other users cloning our analytics ID
-       // e.g. 123e4567-e89b-12d3-a456-426614174000
-      // You may also need to overwrite the script if you're storing data in the US - ex:
-      // src: 'https://us.umami.is/script.js'
-      // Remember to add 'us.umami.is' in `next.config.js` as a permitted domain for the CSP
-    
-    // plausibleAnalytics: {
-    //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-    // },
-    // simpleAnalytics: {},
-    // posthogAnalytics: {
-    //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    // },
-    // googleAnalytics: {
-    //   googleAnalyticsId: '', // e.g. G-XXXXXXX
-    // },
-  
+
+  /* ------------------------------------------------------------------ */
+  /*  Analytics (required by Pliny ≥ 0.2)                               */
+  /*  Set to `false` for each provider until you’re ready to enable it. */
+  /* ------------------------------------------------------------------ */
+  analytics: {
+    plausibleAnalytics: false,
+    // simpleAnalytics: false,
+    // umamiAnalytics: false,
+    // posthogAnalytics: false,
+    // googleAnalytics: false,
+  },
+
+  // If you want to use an analytics provider you have to add it to the
+  // content security policy in the `next.config.js` file.
+  // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
+
+  // plausibleAnalytics: {
+  //   plausibleDataDomain: '', // e.g. yourdomain.com
+  // },
+  // simpleAnalytics: {},
+  // posthogAnalytics: {
+  //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
+  // },
+  // googleAnalytics: {
+  //   googleAnalyticsId: '', // e.g. G-XXXXXXX
+  // },
+
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
-    // Please add your .env file and modify it according to your selection
     // provider: 'buttondown',
   },
+
   comments: {
-    // If you want to use an analytics provider you have to add it to the
+    // If you want to use a comments provider you have to add it to the
     // content security policy in the `next.config.js` file.
     // Select a provider and use the environment variables associated to it
     // https://vercel.com/docs/environment-variables
@@ -83,6 +89,7 @@ const siteMetadata = {
       lang: 'en',
     },
   },
+
   search: {
     provider: 'kbar', // kbar or algolia
     kbarConfig: {
@@ -90,9 +97,7 @@ const siteMetadata = {
     },
     // provider: 'algolia',
     // algoliaConfig: {
-    //   // The application ID provided by Algolia
     //   appId: 'R2IYF7ETH7',
-    //   // Public API key: it is safe to commit it
     //   apiKey: '599cec31baffa4868cae4e79f180729b',
     //   indexName: 'docsearch',
     // },
