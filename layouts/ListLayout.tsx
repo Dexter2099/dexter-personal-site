@@ -1,6 +1,5 @@
 'use client'
 
-import { Skeleton } from '@/components/ui/skeleton'
 import { usePathname } from 'next/navigation'
 import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
@@ -8,7 +7,7 @@ import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import IconsBundle from '@/components/social-icons'
 import SectionContainer from '@/components/SectionContainer'
 import { Button } from '@/components/ui/button'
@@ -76,43 +75,12 @@ export default function ListLayout({
   pagination,
 }: ListLayoutProps) {
   const [searchValue, setSearchValue] = useState('')
-  const [pageViews, setPageViews] = useState<Record<string, number | undefined>>({})
 
   const filteredBlogPosts = posts.filter((post) => {
     const searchContent = post.title + post.summary + post.tags?.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
 
-  useEffect(() => {
-    posts.forEach((post) => {
-      const slug = post.slug
-      if (slug) {
-        // Assume undefined means loading
-        setPageViews((prevPageViews) => {
-          if (slug in prevPageViews) {
-            // If slug already exists, return previous state
-            return prevPageViews
-          } else {
-            // Otherwise, add new slug with undefined value
-            return {
-              ...prevPageViews,
-              [slug]: undefined,
-            }
-          }
-        })
-
-        fetch(`/api/views/blogs?slug=${encodeURIComponent(slug)}`)
-          .then((response) => response.json())
-          .then((data) => {
-            setPageViews((prevPageViews) => ({
-              ...prevPageViews,
-              [slug]: data.pageViewCount,
-            }))
-          })
-          .catch((error) => console.error('Error fetching page views:', error))
-      }
-    })
-  }, [posts])
 
   // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts =
@@ -150,8 +118,7 @@ export default function ListLayout({
           <ul>
             {!filteredBlogPosts.length && 'No posts found.'}
             {displayPosts.map((post) => {
-              const { slug, path, date, title, summary, tags } = post
-              const isLoadingViewCount = pageViews[slug] === undefined
+              const { path, date, title, summary, tags } = post
 
               return (
                 <li key={path} className="py-4">
@@ -173,16 +140,7 @@ export default function ListLayout({
                       <div>
                         <dl>
                           <dt className="sr-only">Published on</dt>
-                          <dd className="flex gap-1 text-base font-medium leading-6 text-muted-foreground">
-                            {isLoadingViewCount ? (
-                              <span className="flex items-center justify-center gap-2">
-                                <Skeleton className="h-6 w-12" />
-                                <span> views</span>
-                              </span>
-                            ) : (
-                              <span>{pageViews[slug]?.toLocaleString() || '...'} views</span>
-                            )}
-                            <span>・</span>
+                          <dd className="text-base font-medium leading-6 text-muted-foreground">
                             <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                           </dd>
                         </dl>
