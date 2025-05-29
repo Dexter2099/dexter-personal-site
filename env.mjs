@@ -1,11 +1,11 @@
-import { createEnv } from "@t3-oss/env-nextjs"
-import { z } from "zod"
+import { createEnv } from '@t3-oss/env-nextjs'
+import { z } from 'zod'
 
 export const env = createEnv({
   server: {
     NEXTAUTH_URL: z.string().url(),
     NEXTAUTH_SECRET: z.string().min(1),
-    NODE_ENV: z.string().refine((value) => ["development", "production"].includes(value), {
+    NODE_ENV: z.string().refine((value) => ['development', 'production'].includes(value), {
       message: "NODE_ENV must be 'development' or 'production'",
     }),
     DATABASE_URL: z.string().url().optional(),
@@ -27,7 +27,6 @@ export const env = createEnv({
     SPOTIFY_CLIENT_ID: z.string().optional(),
     GITHUB_API_TOKEN: z.string().optional(),
     GITHUB_API_URL: z.string().optional(),
-
   },
   client: {
     NEXT_PUBLIC_APP_URL: z.string().url(),
@@ -67,6 +66,5 @@ export const env = createEnv({
     NEXT_PUBLIC_GISCUS_REPOSITORY_ID: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
     NEXT_PUBLIC_GISCUS_CATEGORY: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
     NEXT_PUBLIC_GISCUS_CATEGORY_ID: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
-
   }, // Add a comma here
-});
+})

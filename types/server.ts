@@ -6,7 +6,6 @@ export interface ViewApiResponse {
   }
 }
 
-
 export interface GithubRepository {
   stargazerCount: number
   description: string

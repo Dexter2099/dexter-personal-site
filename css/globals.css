@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
 @layer base {
   :root {
     --background: 204 70% 98%;
@@ -27,35 +27,33 @@
     --ring: 204 77% 47%;
     --radius: 0.5rem;
   }
-  
-    .dark {
-      --background: 240 13.73% 10%;
-      --foreground: 229.76 31.78% 74.71%;
-      --muted: 232.5 15.44% 18.32%;
-      --muted-foreground: 233.79 11.37% 50%;
-      --popover: 234.55 17.46% 12.35%;
-      --popover-foreground: 234 12.4% 52.55%;
-      --card: 234.55 17.46% 12.35%;
-      --card-foreground: 229.76 31.78% 74.71%;
-      --border: 232.5 15.38% 30.59%;
-      --input: 232 20% 14.71%;
-      --primary: 207.43 68.63% 90%;
-      --primary-foreground: 0 0% 20%;
-      --secondary: 225.45 71.22% 72.75%;
-      --secondary-foreground: 234.55 17.46% 12.35%;
-      --tertiary: 0 0% 96.1%;
-      --tertiary-foreground: 0 0% 9%;
-      --accent: 234.55 17.83% 9.47%;
-      --accent-foreground: 0 0% 82.75%;
-      --destructive: 1.58 47.5% 52.94%;
-      --destructive-foreground: 210 40% 98.04%;
-      --ring: 225.45 71.22% 72.75%;
-      --radius: 0.5rem;
 
-    }
+  .dark {
+    --background: 240 13.73% 10%;
+    --foreground: 229.76 31.78% 74.71%;
+    --muted: 232.5 15.44% 18.32%;
+    --muted-foreground: 233.79 11.37% 50%;
+    --popover: 234.55 17.46% 12.35%;
+    --popover-foreground: 234 12.4% 52.55%;
+    --card: 234.55 17.46% 12.35%;
+    --card-foreground: 229.76 31.78% 74.71%;
+    --border: 232.5 15.38% 30.59%;
+    --input: 232 20% 14.71%;
+    --primary: 207.43 68.63% 90%;
+    --primary-foreground: 0 0% 20%;
+    --secondary: 225.45 71.22% 72.75%;
+    --secondary-foreground: 234.55 17.46% 12.35%;
+    --tertiary: 0 0% 96.1%;
+    --tertiary-foreground: 0 0% 9%;
+    --accent: 234.55 17.83% 9.47%;
+    --accent-foreground: 0 0% 82.75%;
+    --destructive: 1.58 47.5% 52.94%;
+    --destructive-foreground: 210 40% 98.04%;
+    --ring: 225.45 71.22% 72.75%;
+    --radius: 0.5rem;
   }
-  
-  
+}
+
 /* @layer base {
   :root {
     --background: 161 60% 100%;
@@ -109,13 +107,12 @@
 
 @layer base {
   * {
-      @apply border-border;
+    @apply border-border;
   }
   body {
-      @apply bg-background text-foreground;
+    @apply bg-background text-foreground;
   }
 }
-
 
 /* Targeting inserted/removed lines in codeblocks */
 span[style*='background-color: rgba(233, 211, 182, 0.05)'] > span > .linenumber {
@@ -201,10 +198,10 @@ span[style*='background-color: rgba(255, 0, 0, 0.1)'] > span > .linenumber:after
 @keyframes skeleton {
   0%,
   100% {
-      @apply bg-muted;
+    @apply bg-muted;
   }
   50% {
-      @apply bg-secondary;
+    @apply bg-secondary;
   }
 }
 
@@ -225,7 +222,7 @@ svg[width='1372'] {
 /* Table of Contents styling */
 /* Courtesy Gilles Castel (castel.dev) */
 .toc {
-  @apply sticky z-40 top-16 hidden h-0 w-[calc(50vw-50%-4em)] break-words text-xs xl:block;
+  @apply sticky top-16 z-40 hidden h-0 w-[calc(50vw-50%-4em)] break-words text-xs xl:block;
   transform: translateX(calc(-100% - 2em)) translateY(2em);
 }
 

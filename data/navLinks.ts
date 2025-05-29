@@ -6,7 +6,6 @@ export const headerNavLinks = [
   { href: '/about', title: 'About' },
 ]
 
-
 export type DashboardNavLinks = {
   title: string
   label: string
@@ -15,58 +14,55 @@ export type DashboardNavLinks = {
   variant: string
   active?: boolean
   hidden?: boolean
-  location: "top" | "bottom"
+  location: 'top' | 'bottom'
 }
 export const dashboardNavLinks: DashboardNavLinks[] = [
   {
-    title: "Dashboard",
-    label: "",
-    icon: "dashboard",
-    href: "/x",
-    variant: "ghost",
+    title: 'Dashboard',
+    label: '',
+    icon: 'dashboard',
+    href: '/x',
+    variant: 'ghost',
     active: true,
-    location: "top",
+    location: 'top',
   },
   {
-    title: "Tools",
-    label: "",
-    icon: "pizza",
-    href: "/x/tools",
-    variant: "ghost",
+    title: 'Tools',
+    label: '',
+    icon: 'pizza',
+    href: '/x/tools',
+    variant: 'ghost',
     active: true,
-    location: "top",
-
+    location: 'top',
   },
   {
-    title: "Admin",
-    label: "InProgress",
-    icon: "candy",
-    href: "/x/candy",
-    variant: "ghost",
+    title: 'Admin',
+    label: 'InProgress',
+    icon: 'candy',
+    href: '/x/candy',
+    variant: 'ghost',
     active: false,
-    location: "bottom",
+    location: 'bottom',
     hidden: false,
-
   },
   {
-    title: "Settings",
-    label: "InProgress",
-    icon: "settings",
-    href: "/x/settings",
-    variant: "ghost",
+    title: 'Settings',
+    label: 'InProgress',
+    icon: 'settings',
+    href: '/x/settings',
+    variant: 'ghost',
     active: false,
-    location: "top",
+    location: 'top',
     hidden: false,
-
   },
   {
-    title: "Logout",
-    label: "",
-    icon: "logout",
-    href: "/x/",
-    variant: "ghost",
+    title: 'Logout',
+    label: '',
+    icon: 'logout',
+    href: '/x/',
+    variant: 'ghost',
     active: true,
-    location: "bottom",
+    location: 'bottom',
     hidden: true,
   },
 ]

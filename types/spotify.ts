@@ -5,10 +5,10 @@ export type Artist = {
   href: string
 }
 
-export type Album ={
-    name: string
-    images: AlbumImage[]
-    external_urls: { spotify: string }
+export type Album = {
+  name: string
+  images: AlbumImage[]
+  external_urls: { spotify: string }
 }
 export type TrackInfo = {
   artists: Artist[]

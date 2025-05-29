@@ -1,32 +1,32 @@
-import type { NextAuthConfig } from "next-auth"
+import type { NextAuthConfig } from 'next-auth'
 
-import { db } from "@/lib/prisma";
-import {MagicLinkEmail} from "@/emails/email-auth-template";
-import { render } from '@react-email/render';
-import Google from "next-auth/providers/google";
-import GitHub from "next-auth/providers/github";
-import Resend from "next-auth/providers/resend";
+import { db } from '@/lib/prisma'
+import { MagicLinkEmail } from '@/emails/email-auth-template'
+import { render } from '@react-email/render'
+import Google from 'next-auth/providers/google'
+import GitHub from 'next-auth/providers/github'
+import Resend from 'next-auth/providers/resend'
 
-import { env } from "@/env.mjs";
+import { env } from '@/env.mjs'
 
 // Notice this is only an object, not a full Auth.js instance
 export default {
-    providers: [
-      GitHub({
-        clientId: env.GITHUB_CLIENT_ID,
-        clientSecret: env.GITHUB_CLIENT_SECRET,
-      }),
-      Google({
-        clientId: env.GOOGLE_CLIENT_ID,
-        clientSecret: env.GOOGLE_CLIENT_SECRET,
-        authorization: {
-          params: {
-            prompt: "consent",
-            access_type: "offline",
-            response_type: "code"
-          }
+  providers: [
+    GitHub({
+      clientId: env.GITHUB_CLIENT_ID,
+      clientSecret: env.GITHUB_CLIENT_SECRET,
+    }),
+    Google({
+      clientId: env.GOOGLE_CLIENT_ID,
+      clientSecret: env.GOOGLE_CLIENT_SECRET,
+      authorization: {
+        params: {
+          prompt: 'consent',
+          access_type: 'offline',
+          response_type: 'code',
         },
-      }),
+      },
+    }),
     //   Resend({
     //     from: env.AUTH_RESEND_EMAIL_FROM,
     //     apiKey: env.AUTH_RESEND_KEY,
@@ -48,19 +48,19 @@ export default {
     //       })
     //     },
     //   }),
-    ],
-    pages: {
-      signIn: "/auth",
-      error: "/auth/error", // Error code passed in query string as ?error=
-      verifyRequest: "/auth/verify", // (used for check email message) 
+  ],
+  pages: {
+    signIn: '/auth',
+    error: '/auth/error', // Error code passed in query string as ?error=
+    verifyRequest: '/auth/verify', // (used for check email message)
+  },
+  callbacks: {
+    async redirect({ url, baseUrl }) {
+      // Allows relative callback URLs
+      if (url.startsWith('/')) return `${baseUrl}${url}`
+      // Allows callback URLs on the same origin
+      else if (new URL(url).origin === baseUrl) return url
+      return baseUrl
     },
-    callbacks: {
-      async redirect({ url, baseUrl }) {
-        // Allows relative callback URLs
-        if (url.startsWith("/")) return `${baseUrl}${url}`
-        // Allows callback URLs on the same origin
-        else if (new URL(url).origin === baseUrl) return url
-        return baseUrl
-      },
-    },
-  } satisfies NextAuthConfig
+  },
+} satisfies NextAuthConfig

@@ -5,7 +5,6 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/andrew-sameh/andrewsam.xyz?style=social)](https://GitHub.com/andrew-sameh/andrewsam.xyz/stargazers/)
 [![GitHub forks](https://img.shields.io/github/forks/andrew-sameh/andrewsam.xyz?style=social)](https://GitHub.com/andrew-sameh/andrewsam.xyz/network/)
 
-
 This is a [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [ShadCN](https://shadcn.com/) personal blog based on Next App directory with [React Server Component](https://nextjs.org/docs/getting-started/react-essentials#server-components) and uses [Contentlayer](https://www.contentlayer.dev/) to manage markdown content.
 
 Check out the documentation below to get started.
@@ -44,7 +43,6 @@ Check out the documentation below to get started.
 - Projects page
 - Preconfigured security headers
 - SEO friendly with RSS feed, sitemaps and more!
-
 
 ## Quick Start Guide
 
@@ -93,7 +91,6 @@ Edit the layout in `app` or content in `data`. With live reloading, the pages au
 `data/siteMetadata.js` - contains most of the site related information which should be modified for a user's need.
 
 `data/authors/default.md` - default author information (required). Additional authors can be added as files in `data/authors`.
-
 
 `data/mainData.ts` - data used to generate styled card on the projects page, the technologies, and the experience components in the root page.
 
@@ -166,19 +163,16 @@ canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-t
 ---
 ```
 
-
 ## Frequently Asked Questions
 
 - [How can I add a custom MDX component?](/faq/custom-mdx-component.md)
 - [How can I customize the `kbar` search?](/faq/customize-kbar-search.md)
 - [How do I deploy on Github pages?](/faq/github-pages-deployment.md)
 
-
 ## Credits
 
 - [Base Template - timlrx/tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
 - [GLB Model - tamminen](https://sketchfab.com/tamminen)
-
 
 ## Licence
 

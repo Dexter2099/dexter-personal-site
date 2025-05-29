@@ -1,27 +1,27 @@
-import NextAuth from "next-auth";
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import { db } from "@/lib/prisma";
-import authConfig from "@/auth.config"
-import Resend from "next-auth/providers/resend";
-import credentialsProvider from "@/auth.credentials";
-import {VerifyUserEmailTemplate} from "@/emails/verify-user-template";
-import { render } from '@react-email/render';
-import { env } from "@/env.mjs";
+import NextAuth from 'next-auth'
+import { PrismaAdapter } from '@auth/prisma-adapter'
+import { db } from '@/lib/prisma'
+import authConfig from '@/auth.config'
+import Resend from 'next-auth/providers/resend'
+import credentialsProvider from '@/auth.credentials'
+import { VerifyUserEmailTemplate } from '@/emails/verify-user-template'
+import { render } from '@react-email/render'
+import { env } from '@/env.mjs'
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(db),
-  session: { strategy: "jwt" },
+  session: { strategy: 'jwt' },
   providers: [
     Resend({
       from: env.AUTH_RESEND_EMAIL_FROM,
       apiKey: env.AUTH_RESEND_KEY,
       sendVerificationRequest: async ({ identifier: email, url, provider, theme }) => {
         const { host } = new URL(url)
-        await fetch("https://api.resend.com/emails", {
-          method: "POST",
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
           headers: {
             Authorization: `Bearer ${provider.apiKey}`,
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             from: provider.from,
@@ -35,8 +35,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     }),
     credentialsProvider,
     ...(authConfig.providers || []),
-
   ],
   ...authConfig.pages,
   ...authConfig.callbacks,
-});
+})

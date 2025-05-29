@@ -8,9 +8,9 @@ authors: ['default']
 layout: PostLayout
 ---
 
-### What *is* prompt engineering?
+### What _is_ prompt engineering?
 
-Large-language models (LLMs) such as Gemini or GPT are basically giant autocomplete engines: you give them text (the **prompt**), they predict the next tokens. Prompt engineering is the art of crafting that input so the model predicts something *useful* instead of nonsense. Google’s September 2024 white-paper sums it up: *“Prompt engineering is the process of designing high-quality prompts that guide LLMs to produce accurate outputs… It’s an iterative process.”*
+Large-language models (LLMs) such as Gemini or GPT are basically giant autocomplete engines: you give them text (the **prompt**), they predict the next tokens. Prompt engineering is the art of crafting that input so the model predicts something _useful_ instead of nonsense. Google’s September 2024 white-paper sums it up: _“Prompt engineering is the process of designing high-quality prompts that guide LLMs to produce accurate outputs… It’s an iterative process.”_
 
 For beginners like us, think of it as talking to a super-literal intern: the clearer the instruction, the better the deliverable.
 
@@ -18,9 +18,9 @@ For beginners like us, think of it as talking to a super-literal intern: the cle
 
 ### Why should we care?
 
-* **No extra infra** – You can squeeze better results out of the same model just by rewriting words.
-* **Portable skill** – Techniques transfer across APIs (Gemini, GPT, Claude, open-source Gemma).
-* **Career booster** – AI assistants are becoming bread-and-butter dev tools; knowing how to steer them is like knowing Git.
+- **No extra infra** – You can squeeze better results out of the same model just by rewriting words.
+- **Portable skill** – Techniques transfer across APIs (Gemini, GPT, Claude, open-source Gemma).
+- **Career booster** – AI assistants are becoming bread-and-butter dev tools; knowing how to steer them is like knowing Git.
 
 ---
 
@@ -28,11 +28,11 @@ For beginners like us, think of it as talking to a super-literal intern: the cle
 
 | Technique                   | Elevator pitch                                            | When I use it                                                    |
 | --------------------------- | --------------------------------------------------------- | ---------------------------------------------------------------- |
-| **Zero-shot**               | Just give instructions: *“Summarise this.”*               | Fast prototype or trivial tasks.                                 |
+| **Zero-shot**               | Just give instructions: _“Summarise this.”_               | Fast prototype or trivial tasks.                                 |
 | **One/Few-shot**            | Add 1–5 examples the model can copy.                      | Classification, data extraction.                                 |
-| **System / Role / Context** | Prepend extra lines that set *what*, *who*, *where*.      | Tone control (“You are a sarcastic QA”), or forcing JSON output. |
+| **System / Role / Context** | Prepend extra lines that set _what_, _who_, _where_.      | Tone control (“You are a sarcastic QA”), or forcing JSON output. |
 | **Chain of Thought (CoT)**  | Tell the model to “Think step-by-step.”                   | Math, reasoning, coding explanations.                            |
-| **ReAct / Agents**          | Let the model reason *and* call tools (search, code, DB). | Complex tasks that need external info.                           |
+| **ReAct / Agents**          | Let the model reason _and_ call tools (search, code, DB). | Complex tasks that need external info.                           |
 
 Google’s guide walks through each of these with code snippets and sample prompts.
 
@@ -41,13 +41,13 @@ Google’s guide walks through each of these with code snippets and sample promp
 ### Five habits that instantly level-up your prompts
 
 1. **Show, don’t tell**
-   Instead of *“Rewrite politely,”* paste one polite example and say “Follow this style.” Models mimic patterns better than abstract rules.
+   Instead of _“Rewrite politely,”_ paste one polite example and say “Follow this style.” Models mimic patterns better than abstract rules.
 2. **Positive instructions > long constraint lists**
    White-paper advice: give clear “do” instructions rather than endless “don’t” bans—it reduces confusion.
 3. **Specify output formats**
    Ask for valid JSON, Markdown, or CSV when you need structure. Forces the model to stay on rails and tames hallucinations.
 4. **Tweak the sampler knobs**
-   *Temperature* ≈ creativity, *Top-K/P* ≈ how wide it looks. Google suggests starting at T = 0.2, top-P = 0.95, top-K = 30 for balanced responses.
+   _Temperature_ ≈ creativity, _Top-K/P_ ≈ how wide it looks. Google suggests starting at T = 0.2, top-P = 0.95, top-K = 30 for balanced responses.
 5. **Document every iteration**
    Keep a sheet: prompt, model, temp, examples, score. When the API updates, you’ll know which prompt broke and why. Future-you will thank present-you.
 
@@ -59,13 +59,12 @@ Google’s guide walks through each of these with code snippets and sample promp
 2. **Prompt‐swap with friends** – Trade and critique. Different brains discover different hacks.
 3. **Reverse-engineer docs** – Copy an example from Google’s paper, strip pieces, observe how output degrades.
 4. **Add a test harness** – In code, wrap your prompt in unit tests with assert-contains. You’ll spot regressions when you fiddle.
-5. **Read the failures** – Half the learning is reading the model’s *wrong* answer and figuring out which words mis-led it.
+5. **Read the failures** – Half the learning is reading the model’s _wrong_ answer and figuring out which words mis-led it.
 
 ---
 
 ### Closing thoughts
 
-Prompt engineering feels like magic, but beneath the sparkle it’s just clear writing, experimentation, and a dash of probability tuning. Start small, log everything, and iterate. Before long you’ll catch yourself treating the LLM like a pair-programmer who actually *gets* you—and that’s when the real productivity boost kicks in.
+Prompt engineering feels like magic, but beneath the sparkle it’s just clear writing, experimentation, and a dash of probability tuning. Start small, log everything, and iterate. Before long you’ll catch yourself treating the LLM like a pair-programmer who actually _gets_ you—and that’s when the real productivity boost kicks in.
 
 Happy prompting! 🚀
-
