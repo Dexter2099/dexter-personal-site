@@ -3,9 +3,13 @@ import { Resend } from 'resend'
 import { render } from '@react-email/render'
 import { env } from '@/env.mjs'
 
-const resend = new Resend(env.RESEND_TOKEN)
+export const runtime = 'nodejs'
 
 export async function POST() {
+  if (!env.RESEND_TOKEN) {
+    return Response.json({ error: 'RESEND_TOKEN not configured' }, { status: 500 })
+  }
+  const resend = new Resend(env.RESEND_TOKEN)
   try {
     const { data, error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
