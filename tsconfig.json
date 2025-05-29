@@ -42,6 +42,6 @@
     ".contentlayer/generated",
     ".contentlayer/generated/**/*.json",
     ".next/types/**/*.ts"
-, "components/mdx/d"  ],
+  ],
   "exclude": ["node_modules"]
 }
