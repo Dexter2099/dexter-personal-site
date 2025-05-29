@@ -7,7 +7,7 @@ const siteMetadata = {
   headerTitle: 'Dexter Mehta',
   description: `A personal blog where I write about software engineering and my developer journey. Also, it's my portfolio.`,
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'http://localhost:3000',
 
   siteRepo: 'https://github.com/Dexter2099/dexter-personal-site',
