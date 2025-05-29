@@ -1,0 +1,31 @@
+---
+type: Blog
+title: "Learning React: One Beginner’s View from the Shallow End"
+date: "2025-05-01"
+summary: "How I went from staring at angle-brackets to saying “Hey, this isn’t so bad!”"
+tags:
+  - React
+  - Web-Dev
+  - Beginner
+authors:
+  - default
+layout: PostLayout
+draft: false
+---
+Today I dipped my toes into React, the JavaScript library everyone keeps raving about. At first glance all the strange angle-brackets mixed with curly braces looked like HTML and JavaScript had crashed into each other. I felt sure I was out of my depth, but I kept going because people say React makes websites feel alive.
+
+Getting started was actually painless. I ran a single command that created a ready-to-use project folder for me. When I typed “npm start,” a browser tab popped open to a page with a spinning blue logo. The page even told me which file to edit first. I changed the welcome text, clicked save, and—without refreshing—the browser updated itself. That instant feedback felt like magic and gave me the confidence to keep tinkering.
+
+React asks you to break your page into “components.” I pictured each component as a Lego brick: one brick for the header, another for a button, another for a footer. If I need two headers, I don’t copy-and-paste code, I just drop in a second header brick. This Lego idea helped me stop worrying about the bigger picture and focus on one small piece at a time.
+
+The next important idea was “state.” State is a special variable that remembers things even after the screen redraws. With a single hook called “useState” I built a tiny counter. Every time I clicked the button the number on the screen jumped up by one, again without reloading the page. Seeing that live update showed me why React’s name makes sense: it reacts to changes for me.
+
+I also met “props,” which are little packets of information a parent component hands to its children. If I want a greeting component to say my name, I just write “name = 'Dexter'” when I create it. Inside the component I reference that name and React fills in the blank. No global variables, no fuss.
+
+There were a few stumbles. I forgot to import a hook and React flashed a bright red error banner. I mismatched parentheses and the entire page went blank. Each fix only required a single line change, but the errors felt scary until I realized they usually point straight to the problem line.
+
+After a few evenings I had a simple site with multiple pages handled by React Router, a button that updates in real time, and a small section that fetches live data from a public API. It is not winning any design awards yet, but it made me feel like I can build dynamic sites instead of static pages.
+
+My next goals are to try a component library so my buttons and forms look professional without my limited CSS skills, and to deploy the site so friends can click a link instead of seeing screenshots. Eventually I want to combine React with some AI tools I have been playing with, but that is an adventure for another week.
+
+If you are thinking about learning React, do not let the curly braces scare you. Start with the starter project, change one line, and watch the browser update itself. That tiny moment of magic is enough to hook you, and the rest of the journey turns into stringing together many small, satisfying wins.
