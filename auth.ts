@@ -3,6 +3,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import { db } from "@/lib/prisma";
 import authConfig from "@/auth.config"
 import Resend from "next-auth/providers/resend";
+import credentialsProvider from "@/auth.credentials";
 import {VerifyUserEmailTemplate} from "@/emails/verify-user-template";
 import { render } from '@react-email/render';
 import { env } from "@/env.mjs";
@@ -32,6 +33,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         })
       },
     }),
+    credentialsProvider,
     ...(authConfig.providers || []),
 
   ],

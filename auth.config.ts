@@ -4,12 +4,10 @@ import { db } from "@/lib/prisma";
 import {MagicLinkEmail} from "@/emails/email-auth-template";
 import { render } from '@react-email/render';
 import Google from "next-auth/providers/google";
-import Credentials from "next-auth/providers/credentials"
 import GitHub from "next-auth/providers/github";
 import Resend from "next-auth/providers/resend";
 
 import { env } from "@/env.mjs";
-import bcrypt from "bcryptjs";
 
 // Notice this is only an object, not a full Auth.js instance
 export default {
@@ -50,32 +48,6 @@ export default {
     //       })
     //     },
     //   }),
-      Credentials({
-        type: "credentials",
-        credentials: {
-          email: { label: "Email", type: "text" },
-          password: { label: "Password", type: "password" },
-        },
-        async authorize(credentials) {
-          const { email, password } = credentials as {
-            email: string;
-            password: string;
-          };
-  
-          if (!email || !password) return null;
-  
-          const user = await db.user.findUnique({
-            where: { email: email },
-          });
-  
-          if (user && bcrypt.compareSync(password, user.password ?? "")) {
-            return user;
-          } else {
-            throw new Error("invalid credentials");
-          }
-          // }
-        },
-      }),
     ],
     pages: {
       signIn: "/auth",
