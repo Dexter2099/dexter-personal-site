@@ -50,7 +50,7 @@ export default function Hero() {
         journey.
       </p>
       <p className="mx-auto max-w-lg text-gray-500 dark:text-gray-400 md:text-xl lg:text-lg xl:text-xl">
-        Also, it's my portfolio.
+        I'm based in Brisbane, Australia but open to work remotely!
       </p>
 
       <IconsBundle
