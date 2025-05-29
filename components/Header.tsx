@@ -9,7 +9,6 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
-import AnalyticsButton from '@/components/UmamiButton'
 import { usePathname } from 'next/navigation'
 import { Session } from 'next-auth'
 import UserDropdown from '@/components/UserDropdown'
@@ -87,7 +86,6 @@ const Header = ({ session }: { session: Session | null }) => {
           </NavigationMenu>
 
           <SearchButton />
-          <AnalyticsButton />
           <ThemeSwitch />
           {session ? (
             <UserDropdown session={session} />
