@@ -1,6 +1,5 @@
 'use client'
 
-import Image from '@/components/Image'
 import { Skeleton } from '@/components/ui/skeleton'
 import { usePathname } from 'next/navigation'
 import { formatDate } from 'pliny/utils/formatDate'
@@ -151,27 +150,13 @@ export default function ListLayout({
           <ul>
             {!filteredBlogPosts.length && 'No posts found.'}
             {displayPosts.map((post) => {
-              const { slug, path, date, title, summary, tags, thumbnail } = post
+              const { slug, path, date, title, summary, tags } = post
               const isLoadingViewCount = pageViews[slug] === undefined
 
               return (
                 <li key={path} className="py-4">
-                  <article className="space-y-2 xl:grid xl:grid-cols-5 xl:items-start xl:gap-4 xl:space-y-0">
-                    <div className="xl:col-span-2">
-                      <Link href={`/${path}`}>
-                        <div className="aspect-w-16 aspect-h-9">
-                          <Image
-                            src={thumbnail || ''}
-                            alt={`${title} thumbnail`}
-                            height="0"
-                            width="0"
-                            className="mb-4 h-fit w-full rounded-md"
-                            unoptimized
-                          />
-                        </div>
-                      </Link>
-                    </div>
-                    <div className="space-y-3 xl:col-span-3">
+                  <article className="space-y-2">
+                    <div className="space-y-3">
                       <div>
                         <h3 className="mb-2 text-2xl font-bold leading-8 tracking-tight">
                           <Link href={`/${path}`} className="text-foreground">
