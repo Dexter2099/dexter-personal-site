@@ -1,0 +1,96 @@
+---
+type: Blog
+title: "Defence Projects I’m Interested In (and How They Help Me Learn AI)"
+date: "2025-05-30"
+summary: "A beginner software engineer maps out hobby projects that look good to defence recruiters while doubling as hands-on lessons in PyTorch, LLMs, and data engineering."
+tags:
+  - LLM
+  - AI
+authors:
+  - default
+layout: PostLayout
+draft: false
+---
+
+I’ve always been fascinated by the high-stakes world of defence tech. Radar, drones, secure comms—the whole lot feels like James-Bond gear minus the tuxedo budget. As a junior developer my honest question is, *“What portfolio pieces would make a defence recruiter raise an eyebrow—in the good way—while still teaching me the AI skills I want?”* Below is the short list I’m sketching for myself, plus why each project feeds both goals.
+
+---
+
+## 1. Tiny-Town **Sensor Fusion** Simulator
+
+**Why defence folks care:** Modern aircraft and autonomous ground vehicles rely on fusing radar, LiDAR and camera feeds into one coherent picture.
+
+**What I can build:** A Python playground that smashes together synthetic LiDAR point clouds and RGB images, then uses a PyTorch model to guess object positions. No real radar required—just open datasets and a sprinkle of Gaussian noise to mimic hardware quirks.
+
+**Skills unlocked:**  
+* Data loaders in PyTorch for multi-modal inputs.  
+* Coordinate-frame math (rotation matrices, hooray!).  
+* Simple Kalman Filter for tracking—still shows up on job descriptions.
+
+---
+
+## 2. **Real-Time Drone Telemetry Dashboard**
+
+**Why defence folks care:** Every drone in a test range needs a live command-and-control interface.
+
+**What I can build:** A React + WebSocket app that plots UAV GPS points on a Leaflet map. I’ll simulate drone packets in a FastAPI backend, then later swap in a real telemetry feed if I buy a hobby drone.
+
+**Skills unlocked:**  
+* WebSockets and back-pressure handling.  
+* Front-end state tricks with React hooks.  
+* Intro to geospatial formats (GeoJSON, CRS).
+
+---
+
+## 3. **Classified-Style Chatbot (on Public Data)**
+
+**Why defence folks care:** Secure, on-prem LLM assistants for analysts are a hot R&D topic.
+
+**What I can build:** A Retrieval-Augmented Generation chatbot that answers questions about open-source military specs. I’ll store vectors in a local Pinecone index and hit a local Llama-3 model using PyTorch or vLLM.
+
+**Skills unlocked:**  
+* Prompt engineering and RAG pipelines.  
+* Fine-tuning or LoRA with PyTorch Lightning.  
+* Security best-practices: no outbound API calls, controllable context window.
+
+---
+
+## 4. **“No-GPS” Navigation with Dead-Reckoning**
+
+**Why defence folks care:** GPS signals can be jammed; dead-reckoning becomes Plan-B.
+
+**What I can build:** A simulation that ingests IMU data (accelerometer + gyroscope) from my phone and estimates position over time. PyTorch handles an LSTM that corrects drift using occasional “ground-truth” fixes.
+
+**Skills unlocked:**  
+* Time-series preprocessing.  
+* Recurrent networks versus Transformers on small data.  
+* Error metrics like CEP (circular error probable).
+
+---
+
+## 5. **Battle-Rhythm Anomaly Detector**
+
+**Why defence folks care:** Network-security teams watch for weird patterns that hint at intrusions.
+
+**What I can build:** Generate fake log traffic, then train an auto-encoder in PyTorch to flag anomalies. Wrap it in a ShadCN-styled React dashboard that streams alerts.
+
+**Skills unlocked:**  
+* Unsupervised learning.  
+* Streaming inference on CPU (cheap deploy).  
+* Clean separation between ML microservice and UI.
+
+---
+
+### How I’ll tackle these projects without drowning
+
+1. **Month-long sprints**—one project at a time to keep scope realistic.  
+2. **Public GitHub repo per project** with a README that explains the defence relevance in plain terms.  
+3. **Blog each milestone** (just like this post) so future employers see the learning curve, not just the finished code.  
+4. **Seek mentoring** on Discord or Reddit r/MachineLearning; constructive critique beats silent coding.  
+5. **Security sanity-check**—never include real restricted data, only open sources.
+
+---
+
+### Final thoughts
+
+None of these mini-projects will single-handedly land me a security clearance, but each is a talking point that shows two things: I understand a slice of defence-domain problems, and I can wield modern AI tools like PyTorch and LLMs to prototype solutions. If you’re also eyeing defence tech from the outside, steal these ideas, tweak them, and compare notes.
