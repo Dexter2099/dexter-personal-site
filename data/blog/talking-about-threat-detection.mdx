@@ -1,0 +1,38 @@
+---
+type: Blog
+title: "Talking about Threat Detection"
+date: "2025-06-05"
+summary: "A mini-practice sheet of forensic-investigation interview questions (and my own answers)"
+tags: ['Forensics', 'Threat Detection', 'Interview Prep']
+authors: ['default']
+layout: PostLayout
+draft: false
+---
+
+Lately I’ve been grilling myself with mock interview questions about **forensic investigation and threat detection**—the kind of curve-balls a hiring manager might toss into a technical chat. Below are three questions that keep popping up, along with the exact answers I’ve been rehearsing. Feel free to borrow or adapt them for your own prep; the point is to have a story that proves you’ve wrestled with real, if small-scale, security problems.
+
+---
+
+### Q: Tell us about a time when you had to work under pressure to complete a complex technical task.
+
+I built a **Threat Detection Simulator**. Basically, the goal was to simulate network traffic using synthetic data and detect anomalies in real time. I used **Python, Flask, and PyTorch** to build the whole thing from scratch. I set up a pipeline that generated synthetic logs, then built an anomaly-detection system and a real-time dashboard so I could actually see threat patterns as they happened. In the end, the simulator achieved about **97 % accuracy** in detecting anomalies. It actually helped me realise how much I enjoy building forensic-style tools.
+
+---
+
+### Q: What constitutes the synthetic logs? How does your detection system detect them?
+
+So, the synthetic logs I generated were designed to mimic telemetry data from IoT-like devices. Each log included time-stamped entries with things like command-execution events, signal strength, and data-flow metrics. I scripted both normal and suspicious patterns—like consistent latency spikes, unusual port access, or command repetition that shouldn’t occur in a legitimate scenario.
+
+For detection, I used a basic anomaly-detection pipeline. I trained a **PyTorch-based neural network** using normal-pattern logs, then flagged deviations during real-time inference. I also included **statistical thresholding** as a fallback—so if, for example, a data flow jumped outside an expected range, it would trigger an alert. It wasn’t military-grade, of course, but the goal was to simulate how a real system might spot red flags in an investigation context.
+
+---
+
+### Q: How do you prioritise and manage multiple forensic or technical tasks with tight deadlines?
+
+To manage it all, I broke down each project into smaller chunks and prioritised tasks based on complexity and dependencies. For example, anything with a steep learning curve or external feedback loop—like setting up encrypted command logic or getting AI-model accuracy tuned—went to the top of my list early. I used **GitHub issues** to track work and plan sprints, even though it was just me, so I wouldn’t lose sight of what needed to be delivered each week.
+
+One thing that really helped was setting up a simple schedule and being strict about version control. I’d commit working builds frequently, which helped me spot problems early and not panic before deadlines. In the end, I submitted everything on time and got strong feedback from lecturers, especially for how well-documented and reproducible my work was.
+
+---
+
+That’s my current flash-card set for threat-detection interviews. If you find them useful, tweak the details to match your own projects—real stories always sound more convincing than hypothetical ones. 
