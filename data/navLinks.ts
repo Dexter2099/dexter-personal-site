@@ -4,6 +4,7 @@ export const headerNavLinks = [
   { href: '/tags', title: 'Tags', hidden: true },
   { href: '/projects', title: 'Projects' },
   { href: '/about', title: 'About' },
+  { href: '/author', title: 'Author' },
 ]
 
 export type DashboardNavLinks = {
