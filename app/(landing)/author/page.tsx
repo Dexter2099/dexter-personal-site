@@ -25,7 +25,7 @@ export default function Page() {
               className="rounded-md"
             />
             <p className="prose max-w-none text-center dark:prose-invert">
-              I am thrilled to share my debut novel,{' '}
+              I am thrilled to share my debut novel,
               <em>I Am Your Beast</em>. Thank you for your support and I hope you enjoy reading it
               as much as I enjoyed writing it.
             </p>
