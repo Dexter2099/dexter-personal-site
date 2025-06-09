@@ -117,6 +117,15 @@ export let projectsData: Project[] = [
     builtWith: ['Python', 'Codex', 'Prompt Engineering'],
   },
   {
+    type: 'work',
+    title: 'Sentiment Analysis on IMDb Reviews',
+    description:
+      'A binary sentiment classifier using TensorFlow and Keras to classify movie reviews as positive or negative',
+    imgSrc: '/static/images/projects/8.jpg',
+    repo: 'https://github.com/Dexter2099/sentiment-analysis-project',
+    builtWith: ['Python', 'TensorFlow', 'Keras'],
+  },
+  {
     type: 'self',
     title: 'Personal website',
     imgSrc: '/static/images/projects/6.jpg',
