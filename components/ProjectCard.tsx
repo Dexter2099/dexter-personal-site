@@ -6,6 +6,8 @@ import { swrFetcher } from '@/lib/utils'
 import { GithubRepo } from '@/components/GithubRepo'
 import Image from 'next/image'
 import Link from 'next/link'
+import IconsBundle from '@/components/social-icons'
+import siteMetadata from '@/data/siteMetadata'
 import { Card } from '@/components/ui/card'
 interface SWRResponse {
   repository: GithubRepository
@@ -15,6 +17,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const { data } = useSWR(repo ? `/api/github?repo=${repo}` : null, swrFetcher)
   const repository: GithubRepository | undefined = data?.repository
   const href = url || repository?.url
+  const owner = siteMetadata.github?.split('/').pop() || ''
+  const repoHref = repo
+    ? repo.startsWith('http')
+      ? repo
+      : `https://github.com/${repo.includes('/') ? repo : `${owner}/${repo}`}`
+    : undefined
 
   return (
     <Card className="md m-2 max-w-[544px] border-0 p-2 shadow-lg ">
@@ -58,15 +66,31 @@ export function ProjectCard({ project }: ProjectCardProps) {
             {repository ? (
               <GithubRepo repo={repository} />
             ) : (
-              url && (
-                <Link
-                  href={url}
-                  className="hover:text-primary-600 dark:hover:text-primary-400 text-base font-medium leading-6 text-primary-500"
-                  aria-label={`Link to ${title}`}
-                >
-                  <span data-umami-event="project-learn-more">Learn More &rarr;</span>
-                </Link>
-              )
+              <div className="flex items-center space-x-2">
+                {url && (
+                  <Link
+                    href={url}
+                    className="hover:text-primary-600 dark:hover:text-primary-400 text-base font-medium leading-6 text-primary-500"
+                    aria-label={`Link to ${title}`}
+                  >
+                    <span data-umami-event="project-learn-more">Learn More &rarr;</span>
+                  </Link>
+                )}
+                {repoHref && (
+                  <>
+                    {url && <span className="text-gray-400 dark:text-gray-500">|</span>}
+                    <Link
+                      href={repoHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`GitHub repository for ${title}`}
+                      className="hover:text-primary-600 dark:hover:text-primary-400 text-gray-400"
+                    >
+                      <IconsBundle kind="github" iconType="icon" size={5} strokeWidth={1} />
+                    </Link>
+                  </>
+                )}
+              </div>
             )}
           </div>
         </div>
