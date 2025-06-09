@@ -9,7 +9,6 @@ export const metadata = genPageMetadata({ title: 'Projects' })
 export default async function Projects() {
   const delay = (ms: number) => new Promise((res) => setTimeout(res, ms))
   // await delay(10000)
-  const workProjects = projectsData.filter(({ type }) => type === 'work')
   return (
     <>
       <SectionContainer>
@@ -24,9 +23,8 @@ export default async function Projects() {
           </div>
           <Separator />
           <div className="py-12">
-            <h3 className="mb-4 text-3xl font-extrabold leading-9 tracking-tight">Work</h3>
             <div className="-m-4 grid grid-cols-1 gap-2 md:grid-cols-2">
-              {workProjects.map((project) => (
+              {projectsData.map((project) => (
                 <ProjectCard key={project.title} project={project} />
               ))}
             </div>
