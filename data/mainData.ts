@@ -125,37 +125,6 @@ export let projectsData: Project[] = [
     repo: 'https://github.com/Dexter2099/sentiment-analysis-project',
     builtWith: ['Python', 'TensorFlow', 'Keras'],
   },
-  {
-    type: 'self',
-    title: 'Personal website',
-    imgSrc: '/static/images/projects/6.jpg',
-    repo: 'andrewsam.xyz',
-    url: 'https://andrewsam.xyz',
-    builtWith: ['Next.js', 'Tailwind', 'Typescript', 'Prisma', 'Umami'],
-  },
-  {
-    type: 'self',
-    title: 'AI Voice Assistant',
-    imgSrc: '/static/images/projects/7.jpg',
-    builtWith: [
-      'OpenAI',
-      'Langchain',
-      'Deepgram',
-      'FastAPI',
-      'Docker',
-      'Oracle Cloud',
-      'LiveKit Agents',
-      'Pinecone',
-      'Next.js',
-      'Postgres',
-      'WebRTC',
-      'NGINX',
-    ],
-    description:
-      "The AI Voice Assistant is a full-stack application designed to facilitate seamless customer interactions through voice commands. It leverages WebRTC to handle reservations, communicate with external APIs for information retrieval, and interact with the backend to manage reservations, including submissions, inquiries, and cancellations. Additionally, the project features a second voice assistant based on Retrieval-Augmented Generation (RAG), allowing users to upload PDF or DOCX files and engage in voice-based conversations to query the document's content.",
-    repo: 'VoiceAssistant-Backend',
-    url: 'https://rtc.andrewsam.xyz/',
-  },
 ]
 
 export let experienceData: Company[] = [
