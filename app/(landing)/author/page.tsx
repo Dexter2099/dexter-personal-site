@@ -25,19 +25,19 @@ export default function Page() {
               className="rounded-md"
             />
             <p className="prose max-w-none text-center dark:prose-invert">
-              A Message from the Author: I am thrilled to share my debut novel,{' '}
+              I am thrilled to share my debut novel,{' '}
               <em>I Am Your Beast</em>. Thank you for your support and I hope you enjoy reading it
               as much as I enjoyed writing it.
             </p>
             <div className="flex space-x-4 pt-4">
               <a
-                href="https://www.amazon.com"
+                href="https://amzn.asia/d/iFeZnqH"
                 className="font-medium text-primary-500 hover:underline"
               >
                 Amazon
               </a>
               <a
-                href="https://www.goodreads.com"
+                href="https://www.goodreads.com/book/show/232581343-i-am-your-beast"
                 className="font-medium text-primary-500 hover:underline"
               >
                 Goodreads
