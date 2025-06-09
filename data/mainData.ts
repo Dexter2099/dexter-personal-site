@@ -59,6 +59,7 @@ export let projectsData: Project[] = [
     description:
       'Built a responsive inventory platform with CRUD, reporting, and live stock tracking. Designed RESTful APIs using Entity Framework for scalable data handling.',
     imgSrc: '/static/images/projects/7.jpg',
+    repo: 'https://github.com/Dexter2099/inventory-management',
     builtWith: ['React', 'TypeScript', '.NET Web API', 'SQL Server'],
   },
   {
@@ -67,6 +68,7 @@ export let projectsData: Project[] = [
     description:
       'Developed a dashboard to monitor and visualize crypto performance. Used Flask to fetch and store data; implemented interactive portfolio charts.',
     imgSrc: '/static/images/projects/1.jpg',
+    repo: 'https://github.com/Dexter2099/crypto-portfolio-visualizer',
     builtWith: ['React', 'Chart.js', 'Flask', 'SQLAlchemy', 'CoinGeckoAPI'],
   },
   {
@@ -75,6 +77,7 @@ export let projectsData: Project[] = [
     description:
       'Built a real-time UAV tracking interface with map-based commands and live telemetry. Achieved sub-200ms latency using WebSockets.',
     imgSrc: '/static/images/projects/2.jpg',
+    repo: 'https://github.com/Dexter2099/secure-drone-control',
     builtWith: ['React', 'Leaflet.js', 'Flask + Socket.IO'],
   },
   {
@@ -83,6 +86,7 @@ export let projectsData: Project[] = [
     description:
       'Created an AI-driven intrusion detection simulation using synthetic network data. Integrated backend model with interactive visual dashboard.',
     imgSrc: '/static/images/projects/3.jpg',
+    repo: 'https://github.com/Dexter2099/threat-detection-ai-sim',
     builtWith: ['PyTorch', 'Flask REST API', 'React'],
   },
   {
@@ -91,6 +95,7 @@ export let projectsData: Project[] = [
     description:
       'Developed a responsive CMS with full CRUD, user auth, and role-based access. Designed mobile-first UI for seamless content management.',
     imgSrc: '/static/images/projects/4.jpg',
+    repo: 'https://github.com/Dexter2099/laravel-blog-crud',
     builtWith: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
   },
   {
@@ -99,6 +104,7 @@ export let projectsData: Project[] = [
     description:
       'Built a CNN to detect pneumonia from chest X-rays with model explainability using Grad-CAM. Deployed with an interactive Streamlit UI.',
     imgSrc: '/static/images/projects/5.jpg',
+    repo: 'https://github.com/Dexter2099/xray-pneumonia-classifier',
     builtWith: ['Python', 'PyTorch', 'Grad-CAM'],
   },
   {
