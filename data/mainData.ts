@@ -108,6 +108,15 @@ export let projectsData: Project[] = [
     builtWith: ['Python', 'PyTorch', 'Grad-CAM'],
   },
   {
+    type: 'work',
+    title: 'Mining Gym',
+    description:
+      'A configurable benchmarking environment for optimizing truck dispatch scheduling in open-pit mining using Reinforcement Learning.',
+    imgSrc: '/static/images/projects/7.jpg',
+    repo: 'https://github.com/Dexter2099/Mining-Gym',
+    builtWith: ['Python', 'Codex', 'Prompt Engineering'],
+  },
+  {
     type: 'self',
     title: 'Personal website',
     imgSrc: '/static/images/projects/6.jpg',
