@@ -46,10 +46,10 @@ export default function Hero() {
         />
       </div>
       <p className="mx-auto mt-3 max-w-lg text-gray-500 dark:text-gray-400 md:text-xl lg:text-lg xl:text-xl">
-        Welcome to my personal blog where I write about my software engineering journey.
+        Exploring real-world software engineering through projects, experiments, and continuous learning.
       </p>
       <p className="mx-auto max-w-lg text-gray-500 dark:text-gray-400 md:text-xl lg:text-lg xl:text-xl">
-        I'm based in Brisbane, Australia but open to work remotely!
+        I'm based in Brisbane, Australia
       </p>
 
       <IconsBundle
