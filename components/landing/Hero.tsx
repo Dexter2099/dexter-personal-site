@@ -1,4 +1,5 @@
 'use client'
+
 import { useEffect, useRef } from 'react'
 import Typed from 'typed.js'
 import IconsBundle from '@/components/social-icons'
@@ -10,11 +11,7 @@ function createTypedInstance(el: HTMLElement) {
     stringsElement: '#bios',
     typeSpeed: 100,
     autoInsertCss: true,
-    cursorChar: '|', // specify the cursor character
-    // attr: 'text-4xl font-extrabold' , // specify additional HTML attributes
-    // backSpeed: 100,
-    // loop: true,
-    // backDelay: 1000,
+    cursorChar: '|',
   })
 }
 
@@ -25,29 +22,34 @@ export default function Hero() {
   useEffect(() => {
     if (el.current) {
       typed.current = createTypedInstance(el.current)
-      //   typed.current.cursor = (<span className="">|</span>)
     }
     return () => {
-      typed?.current?.destroy()
+      typed.current?.destroy()
     }
   }, [])
 
   return (
     <div className="container mx-auto -mt-16 flex h-screen flex-col content-center justify-center px-4 py-5 text-center">
       <h1 className="sr-only">{siteMetadata.title}</h1>
+
       <ModelViewer />
+
       <div>
         <ul id="bios" className="hidden">
           <li>Hi I'm Dexter!</li>
         </ul>
+
         <span
           ref={el}
-          className=" text-4xl font-extrabold tracking-tighter text-primary sm:text-6xl"
+          className="text-4xl font-extrabold tracking-tighter text-primary sm:text-6xl"
         />
       </div>
+
       <p className="mx-auto mt-3 max-w-lg text-gray-500 dark:text-gray-400 md:text-xl lg:text-lg xl:text-xl">
-        Exploring real-world software engineering through projects, experiments, and continuous learning.
+        Exploring real-world software engineering through projects, experiments,
+        and continuous learning.
       </p>
+
       <p className="mx-auto max-w-lg text-gray-500 dark:text-gray-400 md:text-xl lg:text-lg xl:text-xl">
         I'm based in Brisbane, Australia
       </p>
