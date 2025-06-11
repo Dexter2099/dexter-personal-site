@@ -26,7 +26,7 @@ export default function Page() {
             />
             <p className="prose max-w-none text-center dark:prose-invert">
               I am thrilled to share my debut novel,
-              <em>I Am Your Beast</em>. Thank you for your support and I hope you enjoy reading it
+              <em> I Am Your Beast</em>. Thank you for your support and I hope you enjoy reading it
               as much as I enjoyed writing it.
             </p>
             <div className="flex space-x-4 pt-4">
