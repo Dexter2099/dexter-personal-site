@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
 
       <p className="mx-auto mt-3 max-w-lg text-gray-500 dark:text-gray-400 md:text-xl lg:text-lg xl:text-xl">
-        Exploring real-world software engineering through projects, experiments and continuous
+        Exploring real-world software engineering through artificial intelligence, experiments and continuous
         learning.
       </p>
 
