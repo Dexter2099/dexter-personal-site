@@ -19,7 +19,7 @@ const siteMetadata = {
 
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/in/dexter-m-b808b4151/',
+  linkedin: 'https://www.linkedin.com/in/dexter-developer/',
   // threads: 'https://www.threads.net',
 
   spotify: 'https://open.spotify.com/user/dex048?si=982b9a3640564b22',
