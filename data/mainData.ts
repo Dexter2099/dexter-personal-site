@@ -58,7 +58,7 @@ export let projectsData: Project[] = [
     title: 'Inventory Management System App',
     description:
       'Built a responsive inventory platform with CRUD, reporting, and live stock tracking. Designed RESTful APIs using Entity Framework for scalable data handling.',
-    imgSrc: '/static/images/projects/7.jpg',
+    imgSrc: '/static/images/projects/Inventory Management System App.png',
     repo: 'https://github.com/Dexter2099/inventory-management',
     builtWith: ['React', 'TypeScript', '.NET Web API', 'SQL Server'],
   },
@@ -67,7 +67,7 @@ export let projectsData: Project[] = [
     title: 'Crypto Portfolio Visualizer',
     description:
       'Developed a dashboard to monitor and visualize crypto performance. Used Flask to fetch and store data; implemented interactive portfolio charts.',
-    imgSrc: '/static/images/projects/1.jpg',
+    imgSrc: '/static/images/projects/Crypto Portfolio Visualizer.png',
     repo: 'https://github.com/Dexter2099/crypto-portfolio-visualizer',
     builtWith: ['React', 'Chart.js', 'Flask', 'SQLAlchemy', 'CoinGeckoAPI'],
   },
@@ -76,7 +76,7 @@ export let projectsData: Project[] = [
     title: 'Drone Command & Control System',
     description:
       'Built a real-time UAV tracking interface with map-based commands and live telemetry. Achieved sub-200ms latency using WebSockets.',
-    imgSrc: '/static/images/projects/2.jpg',
+    imgSrc: '/static/images/projects/Drone Command and Control System.png',
     repo: 'https://github.com/Dexter2099/secure-drone-control',
     builtWith: ['React', 'Leaflet.js', 'Flask + Socket.IO'],
   },
@@ -85,7 +85,7 @@ export let projectsData: Project[] = [
     title: 'Threat Detection AI Simulation',
     description:
       'Created an AI-driven intrusion detection simulation using synthetic network data. Integrated backend model with interactive visual dashboard.',
-    imgSrc: '/static/images/projects/3.jpg',
+    imgSrc: '/static/images/projects/Threat Detection AI Simulation.png',
     repo: 'https://github.com/Dexter2099/threat-detection-ai-sim',
     builtWith: ['PyTorch', 'Flask REST API', 'React'],
   },
@@ -94,7 +94,7 @@ export let projectsData: Project[] = [
     title: 'Laravel Blog Application',
     description:
       'Developed a responsive CMS with full CRUD, user auth, and role-based access. Designed mobile-first UI for seamless content management.',
-    imgSrc: '/static/images/projects/4.jpg',
+    imgSrc: '/static/images/projects/Laravel Blog Application.png',
     repo: 'https://github.com/Dexter2099/laravel-blog-crud',
     builtWith: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
   },
@@ -103,7 +103,7 @@ export let projectsData: Project[] = [
     title: 'X-ray Pneumonia Classifier',
     description:
       'Built a CNN to detect pneumonia from chest X-rays with model explainability using Grad-CAM. Deployed with an interactive Streamlit UI.',
-    imgSrc: '/static/images/projects/5.jpg',
+    imgSrc: '/static/images/projects/X-ray Pneumonia Classifier.png',
     repo: 'https://github.com/Dexter2099/xray-pneumonia-classifier',
     builtWith: ['Python', 'PyTorch', 'Grad-CAM'],
   },
@@ -112,7 +112,7 @@ export let projectsData: Project[] = [
     title: 'Open-Pit-Mining Gym',
     description:
       'A configurable benchmarking environment for optimizing truck dispatch scheduling in open-pit mining using Reinforcement Learning.',
-    imgSrc: '/static/images/projects/7.jpg',
+    imgSrc: '/static/images/projects/Open Pit Mining Gym.png',
     repo: 'https://github.com/Dexter2099/Open-Pit-Mining-Gym',
     builtWith: ['Python', 'Codex', 'Prompt Engineering'],
   },
@@ -121,7 +121,7 @@ export let projectsData: Project[] = [
     title: 'Sentiment Analysis on IMDb Reviews',
     description:
       'A binary sentiment classifier using TensorFlow and Keras to classify movie reviews as positive or negative',
-    imgSrc: '/static/images/projects/8.jpg',
+    imgSrc: '/static/images/projects/Sentiment Analysis on IMDb Reviews.png',
     repo: 'https://github.com/Dexter2099/sentiment-analysis-project',
     builtWith: ['Python', 'TensorFlow', 'Keras'],
   },
