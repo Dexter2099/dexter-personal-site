@@ -1,0 +1,67 @@
+---
+type: Blog
+title: "Building SureJan.app: Lessons from Cloning Old Reddit"
+date: "2025-08-28"
+summary: "What I learned about full-stack engineering, deployment, and product thinking while building an own online forum."
+tags:
+  - Django
+  - React
+  - Fly.io
+  - PostgreSQL
+authors:
+  - default
+layout: PostLayout
+draft: false
+---
+
+When I started **SureJan.app**, I just wanted a space for local communities free from astroturfing and algorithmic feeds. The side mission? Teaching myself to take a full-stack product from empty repo to a running web app. Here’s what I learned along the way.
+
+---
+
+## The Tech Stack (and Why It Matters)
+
+**Backend:** Django + HTMX for a snappy, server-rendered feel without a heavy SPA.  
+**Database:** PostgreSQL hosted on Neon/Fly.io—structured, relational, and production-ready.  
+**Frontend polish:** Vanilla templates with sprinkles of HTMX interactivity; TailwindCSS for styling.  
+**Infra & Deploy:** Docker + Fly.io Machines for app hosting, Fly Postgres for data, WhiteNoise for static assets.  
+**Other pieces:** GitHub Actions for CI, favicon + asset pipeline, and lots of debugging around collectstatic.
+
+These choices weren’t just “because tutorials said so.” They were deliberate practice in tools that real-world teams use to balance **developer velocity, scalability, and cost.**
+
+---
+
+## Skills I Gained
+
+* **DevOps basics:** Writing Dockerfiles, handling Fly.io deploys, scaling machines up/down, debugging logs.  
+* **Database wiring:** Connecting Django to remote Postgres, running migrations, and reasoning about why SQLite won’t cut it in production.  
+* **Auth and security:** Building signup/login flows, CSRF-protected forms, rate-limiting deletes.  
+* **Frontend ergonomics:** Using HTMX to progressively enhance instead of over-engineering.  
+* **Error hunting:** Manifest errors, favicon 500s, static file configs—the kind of yak-shaving that’s the reality of production work.  
+* **Product thinking:** Balancing what’s fun to build vs. what creates value for users (e.g., letting authors delete posts within a 15-minute grace period).  
+
+---
+
+## Challenges (and Breakthroughs)
+
+1. **Deployment woes:** My biggest blockers weren’t code but infra—favicon errors, collectstatic misconfigs, and Fly scaling quirks. Each solved bug was a mini-lesson in production readiness.  
+2. **Database decisions:** Starting with SQLite felt easy until migrations broke; shifting fully to Postgres was the real-world choice.  
+3. **UI minimalism:** Instead of chasing pixel-perfect clones, I shipped just enough UI polish (horizontal nav bar, clear logo, up/down arrows) to make the MVP usable.  
+
+---
+
+## What Employers Might Like About This
+
+* **End-to-end ownership**: I didn’t just “follow a tutorial.” I made tech decisions, fixed production bugs, and shipped a live product.  
+* **Adaptability**: Swapping between Django, Docker, Fly.io, React/Tailwind, and Postgres shows I can navigate a modern stack.  
+* **Persistence**: I learned the hard way that building in production means debugging at 1am. I stuck through, documented, and iterated.  
+* **Community mindset**: This isn’t a toy app; it’s a product with a mission—free speech spaces for local communities.  
+
+---
+
+## Closing Thoughts
+
+SureJan.app isn’t Reddit-scale, but it’s my proof of concept that I can take a complex system from scratch to live. 
+
+
+
+---
